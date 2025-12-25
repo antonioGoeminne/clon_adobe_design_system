@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { Slot } from '@radix-ui/react-slot';
 import { cn } from '../../../lib/utils';
 
-const baseClasses = 'font-base cursor-pointer focus:ring-2 focus:outline focus:outline-3 focus:outline-offset-3 disabled:cursor-not-allowed px-4 outline-blue-800';
+const baseClasses = 'font-base cursor-pointer focus:ring-2 focus:outline focus:outline-3 focus:outline-offset-3 disabled:cursor-not-allowed outline-blue-800 flex items-center justify-center';
 const buttonVariants = cva(baseClasses, {
   variants: {
     variant: {
@@ -14,6 +14,10 @@ const buttonVariants = cva(baseClasses, {
       solid: '',
       outlined: '',
     },
+    size: {
+      default: 'px-4',
+      icon: 'p-0',
+    },
   },
   compoundVariants: [
     {
@@ -24,7 +28,7 @@ const buttonVariants = cva(baseClasses, {
     {
       variant: 'primary',
       style: 'outlined',
-      class: 'bg-transparent border-3 border-gray-800 hover:bg-gray-300 active:bg-gray-400 text-gray-800 disabled:bg-gray-200  focus:border-0 focus:outline-offset-4',
+      class: 'bg-transparent border-3 border-gray-800 hover:bg-gray-300 active:bg-gray-400 text-gray-800 disabled:bg-gray-200 focus:border-0 focus:outline-offset-4',
     },
     {
       variant: 'accent',
@@ -50,6 +54,7 @@ const buttonVariants = cva(baseClasses, {
   defaultVariants: {
     variant: 'accent',
     style: 'solid',
+    size: 'default',
   },
 });
 
@@ -64,6 +69,7 @@ function Button({
   className,
   variant = 'accent',
   style = 'solid',
+  size = 'default',
   asChild = false,
   ...props
 }: ButtonProps) {
@@ -71,7 +77,7 @@ function Button({
   const Comp = asChild ? Slot : "button";
 
   return (
-    <Comp className={cn(buttonVariants({ variant, style }), className, 'font-normal text-base rounded-full h-10 min-w-22.75')} {...props} />
+    <Comp className={cn(buttonVariants({ variant, style, size }), className, 'font-normal text-base rounded-full h-10', size === 'icon' && 'w-10 p-3')} {...props} />
   );
 }
 

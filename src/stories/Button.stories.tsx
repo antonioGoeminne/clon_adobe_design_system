@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import downloadIcon from '../assets/icons/download.svg';
 
 import { fn } from 'storybook/test';
 
@@ -14,12 +15,17 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['accent', 'negative'],
+      options: ['primary', 'accent', 'negative'],
     },
     style: {
       control: 'select',
       options: ['solid', 'outlined'],
     },
+    size: {
+      control: 'select',
+      options: ['default', 'icon'],
+    },
+    children: { control: 'text' },
   },
   args: { onClick: fn(), disabled: false, variant: 'accent', style: 'solid' },
 } satisfies Meta<typeof Button>;
@@ -48,5 +54,15 @@ export const Negative: Story = {
     variant: 'negative',
     style: 'solid',
     children: 'Negative',
+  },
+};
+
+export const WithChildren: Story = {
+  args: {
+    style: 'solid',
+    variant: 'accent',
+    size: 'icon',
+    asChild: true,
+    children: <img src={downloadIcon} style={{ width: 40 }} alt="download" />,
   },
 };
