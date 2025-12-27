@@ -2,19 +2,22 @@
   --font-family-base: 'Source Sans Pro', sans-serif;
 
   /* Font Sizes */
-  --font-size-xxs: 12px;
-  --font-size-xs: 14px;
-  --font-size-s: 16px;
-  --font-size-m: 20px;
-  --font-size-l: 24px;
-  --font-size-xl: 32px;
-  --font-size-xxl: 40px;
-  --font-size-xxxl: 56px;
+  --text-body-xxs: 12px;
+  --text-body-xs: 14px;
+  --text-body-s: 14px;
+  --text-body-m: 20px;
+  --text-body-l: 18px;
+  --text-body-xl: 32px;
+  --text-body-xxl: 40px;
+  --text-body-xxxl: 56px;
 
   /* Font Weights */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-heavy: 700;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-strong: 600;
+
+  --rounded-sm: 4px;
+  --rounded-xl: 10px;
 
   /* Colors */
   /* Gray */
