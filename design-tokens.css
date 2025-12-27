@@ -4,7 +4,7 @@
   /* Font Sizes */
   --text-body-xxs: 12px;
   --text-body-xs: 14px;
-  --text-body-s: 16px;
+  --text-body-s: 14px;
   --text-body-m: 20px;
   --text-body-l: 18px;
   --text-body-xl: 32px;
@@ -17,6 +17,7 @@
   --font-strong: 600;
 
   --rounded-sm: 4px;
+  --rounded-xl: 10px;
 
   /* Colors */
   /* Gray */

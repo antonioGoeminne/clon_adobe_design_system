@@ -41,6 +41,14 @@ export const Primary: Story = {
   },
 };
 
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    style: 'solid',
+    children: 'Secondary',
+  },
+};
+
 export const Accent: Story = {
   args: {
     variant: 'accent',

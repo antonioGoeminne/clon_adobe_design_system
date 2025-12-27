@@ -1,3 +1,4 @@
+// @ts-nocheck it fails to render useState
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
@@ -24,30 +25,62 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {
-  render: (args) => {
-    const [open, setOpen] = useState(false);
+export const Playground: Story = (args) => {
+  const [open, setOpen] = useState(false);
 
-    return (
-      <div style={{ display: 'grid', gap: 16 }}>
-        <Button onClick={() => setOpen(true)} variant="accent" style="solid">
-          Open Dialog
-        </Button>
-        <AlertDialog
-          open={open}
-          onClose={() => setOpen(false)}
-          {...args}
-        />
-      </div>
-    );
-  },
+  return (
+    <>
+      <Button onClick={() => setOpen(true)} variant="accent" style="solid">
+        Open Dialog
+      </Button>
+      <AlertDialog
+        open={open}
+        {...args}
+        onClose={() => setOpen(false)}
+      />
+    </>
+  );
 };
 
-export const Open: Story = {
+export const Open: Story = (args) => (
+  <AlertDialog open {...args} onClose={() => { }} />
+);
+
+export const WithActionButtons: Story = (args) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpen(true)} variant="accent" style="solid">
+        Open Dialog
+      </Button>
+      <AlertDialog
+        open={open}
+        {...args}
+        actionButtons={
+          <Button variant="accent" style="solid" onClick={() => setOpen(false)}>
+            Confirm
+          </Button>
+        }
+        onClose={() => setOpen(false)}
+      />
+    </>
+  );
+};
+
+export const LongContent: Story = {
   args: {
-    // Controlled open state for quick visual test
+    title: 'Title',
+    open: true,
+    onClose: () => { },
+    children: (
+      <div>
+        {Array.from({ length: 30 }).map((_, i) => (
+          <p key={i}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante justo. Cras faucibus eros sit amet lorem aliquam tempor. Duis placerat ac nisi eget hendrerit. Aenean tincidunt pretium aliquam.
+          </p>
+        ))}
+      </div>
+    ),
   },
-  render: (args) => (
-    <AlertDialog open onClose={() => { }} {...args} />
-  ),
 };

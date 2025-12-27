@@ -6,14 +6,12 @@ export function useOnClickOutside(
     fn: () => void,
 ) {
 
-    // Add event handling for close when clicking outside.
     useEffect(() => {
-        if (!isNull(elRef)) return () => { };
+        if (isNull(elRef)) return () => { };
 
         function onClickOutside(
             event: MouseEvent | TouchEvent,
         ) {
-            // No-op if clicked element is a descendant of element's contents.
             if (
                 event.target instanceof Node &&
                 elRef?.current != null &&
