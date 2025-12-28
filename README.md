@@ -1,5 +1,5 @@
 🎨 Adobe clon design system
-A modern, scalable, and type-safe component library built for speed and consistency.
+A modern, scalable, and type-safe component library built for speed and consistency. It's based on a figma community design: https://www.figma.com/design/Gyuj72radnRVxPH9mGA2XW/Adobe-Spectrum-Design-System--Community-?node-id=41-11058&p=f&t=fQTd369mIIRVfJx9-0 that try to replicate spectrum v2 design sytme from adobe: https://react-spectrum.adobe.com/getting-started
 
 Welcome to  this project. This design system is engineered to provide a seamless developer experience while ensuring all interfaces are beautiful, responsive, and accessible by default. It leverages the power of utility-first CSS, isolated component development, and declarative variant management.
 
