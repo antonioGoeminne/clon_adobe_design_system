@@ -34,5 +34,5 @@ export function useOnClickOutside(
                 onClickOutside,
             );
         };
-    }, [fn]);
+    }, [fn, elRef]);
 }

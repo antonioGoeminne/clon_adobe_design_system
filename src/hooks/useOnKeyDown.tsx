@@ -16,5 +16,5 @@ export function useOnKeyDown(
         return () => {
             document.removeEventListener('keydown', onKeyDown);
         };
-    }, [fn]);
+    }, [fn, key]);
 }

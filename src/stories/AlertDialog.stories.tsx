@@ -1,4 +1,3 @@
-// @ts-nocheck it fails to render useState
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
