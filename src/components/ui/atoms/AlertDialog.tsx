@@ -8,7 +8,7 @@ import {
 import { createPortal } from 'react-dom';
 import { cn } from '../../../lib/utils';
 import { useFocus, useOnClickOutside, useOnKeyDown, useReturnFocus } from '../../../hooks';
-import { Divider } from './Divider';
+import { Divider } from './Divider/Divider';
 import { Button } from './Button';
 
 export const AlertDialog = ({
