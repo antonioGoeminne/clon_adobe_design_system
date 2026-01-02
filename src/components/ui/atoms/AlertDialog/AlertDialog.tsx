@@ -6,10 +6,10 @@ import {
   useState,
 } from 'react';
 import { createPortal } from 'react-dom';
-import { cn } from '../../../lib/utils';
-import { useFocus, useOnClickOutside, useOnKeyDown, useReturnFocus } from '../../../hooks';
-import { Divider } from './Divider/Divider';
-import { Button } from './Button';
+import { cn } from '../../../../lib/utils';
+import { useFocus, useOnClickOutside, useOnKeyDown, useReturnFocus } from '../../../../hooks';
+import { Divider } from '../Divider/Divider';
+import { Button } from '../Button';
 
 export const AlertDialog = ({
   open = false,
@@ -53,7 +53,7 @@ function ModalDialogImpl({
   useFocus(dialogRef);
 
   return createPortal(
-    <div className={cn("bg-black/40 fixed inset-0 flex items-center justify-center p-0 sm:p-20 transition-opacity duration-200 ease-out opacity-0", { ['opacity-100']: visible })}>
+    <div data-testid="backdrop" className={cn("bg-black/40 fixed inset-0 flex items-center justify-center p-0 sm:p-20 transition-opacity duration-200 ease-out opacity-0", { ['opacity-100']: visible })}>
       <div
         aria-describedby={contentId}
         aria-labelledby={titleId}

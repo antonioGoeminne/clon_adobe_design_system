@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AlertDialog } from '../components/ui/atoms/AlertDialog';
+import { AlertDialog } from '../components/ui/atoms/AlertDialog/AlertDialog';
 
 const meta = {
   title: 'Atoms/AlertDialog',
