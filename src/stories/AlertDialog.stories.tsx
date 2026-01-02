@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AlertDialog } from '../components/ui/atoms/AlertDialog';
+import { AlertDialog } from '../components/ui/atoms/AlertDialog/AlertDialog';
 
 const meta = {
   title: 'Atoms/AlertDialog',
@@ -9,20 +9,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Playground: Story = {
-  render: (args) => <AlertDialog {...args} />,
-  args: {
-    title: 'Title',
-    open: false,
-    onClose: () => { },
-    children: 'Body',
-  },
-};
+const defaultArgs = {
+  title: 'Title',
+  open: false,
+  onClose: () => { },
+  children: 'Body',
+}
 
 export const Open: Story = {
   render: (args) => <AlertDialog {...args} />,
   args: {
-    ...Playground.args,
+    ...defaultArgs,
     open: true,
   },
 };
@@ -30,7 +27,7 @@ export const Open: Story = {
 export const WithActionButtons: Story = {
   render: (args) => <AlertDialog {...args} />,
   args: {
-    ...Playground.args,
+    ...defaultArgs,
     open: true,
     actionButtons: (
       <>
