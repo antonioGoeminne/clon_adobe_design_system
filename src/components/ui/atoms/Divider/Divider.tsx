@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "../../../lib/utils"
+import { cn } from "../../../../lib/utils"
 
 const baseClasses = "bg-gray-300 w-full rounded-xl border-none my-2"
 const dividerVariants = cva(baseClasses, {
