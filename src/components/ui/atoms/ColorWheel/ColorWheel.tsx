@@ -186,7 +186,6 @@ export const ColorWheel = React.forwardRef<HTMLDivElement, ColorWheelProps>(func
                     </div>
                 </div>
             )}
-
             {isWheelReady && (
                 <div
                     {...thumbProps}
@@ -206,10 +205,10 @@ export const ColorWheel = React.forwardRef<HTMLDivElement, ColorWheelProps>(func
                         transform: `translate(-50%, -50%) scale(${isFocused || wheelState.isDragging ? 1.5 : 1})`,
                         transformOrigin: "center",
                     }}
-                    aria-hidden="true"
                 >
                     <input
                         {...inputProps}
+                        aria-label={ariaLabel}
                         ref={inputRef}
                         style={{
                             position: "absolute",
