@@ -3,7 +3,7 @@ import downloadIcon from '../assets/icons/download.svg';
 
 import { fn } from 'storybook/test';
 
-import { Button } from '../components/ui/atoms/Button';
+import { Button } from '../components/ui/atoms/Button/Button';
 
 const meta = {
   title: 'Atoms/Button',
