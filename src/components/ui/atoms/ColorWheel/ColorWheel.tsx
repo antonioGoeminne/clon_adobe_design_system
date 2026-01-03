@@ -1,6 +1,6 @@
 import React, { useRef, useState, useCallback } from "react"
 import { cn } from "../../../../lib/utils"
-import { useColorWheel, useColorWheelState } from "./hooks/use-color"
+import { useColorWheel, useColorWheelState } from "./hooks/useColor/use-color"
 import { useResizeObserver } from "../../../../hooks/useResizeObserver"
 
 interface ColorWheelProps {
