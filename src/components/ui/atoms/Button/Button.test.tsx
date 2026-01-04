@@ -72,4 +72,10 @@ describe("Button tests", () => {
         fireEvent.keyDown(button, { key: 'Enter', code: 'Enter' });
         expect(onKeyDown).toHaveBeenCalled();
     });
+
+    it('Should have default variant (accent) if it is not provided', () => {
+        render(<Button>button</Button>);
+        const button = screen.getByRole('button');
+        expect(button.className).toContain('bg-blue-900')
+    })
 }) 
