@@ -1,6 +1,6 @@
 
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Tabs } from "../components/ui/atoms/Tabs";
+import { Tabs } from "../components/ui/atoms/Tabs/Tabs";
 import DownloadIcon from "../assets/icons/DownloadIcon";
 
 
