@@ -1,6 +1,6 @@
 import { useEffect, type RefObject } from "react"
 
-export function useResizeObserver(ref: RefObject<HTMLElement | null>, callback: () => void) {
+export function useResizeObserver(ref: RefObject<HTMLElement>, callback: () => void) {
     useEffect(() => {
         const element = ref.current
         if (!element) return
