@@ -1,4 +1,4 @@
-import React, { useRef, useState, useCallback } from "react"
+import React, { useRef, useState, useCallback, type RefObject } from "react"
 import { cn } from "../../../../lib/utils"
 import { useColorWheel, useColorWheelState } from "./hooks/useColor/use-color"
 import { useResizeObserver } from "../../../../hooks/useResizeObserver"
@@ -68,7 +68,7 @@ export const ColorWheel = React.forwardRef<HTMLDivElement, ColorWheelProps>(func
         }
     }, [])
 
-    useResizeObserver(containerRef, resizeHandler)
+    useResizeObserver(containerRef as RefObject<HTMLElement>, resizeHandler)
 
     const state = useColorWheelState({ defaultValue, value, onChange })
     const {

@@ -1,5 +1,5 @@
 import { useEffect, type RefObject } from "react";
-import { isNull } from "../lib/utils";
+import { isNull } from "../../lib/utils";
 
 export function useOnClickOutside(
     elRef: RefObject<HTMLDivElement> | null,
