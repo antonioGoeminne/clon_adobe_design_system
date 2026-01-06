@@ -1,4 +1,3 @@
-
 # 🎨 Adobe Clone Design System
 
 A modern, scalable, and type-safe component library built for speed and consistency.  
@@ -8,7 +7,7 @@ This design system is engineered to provide a seamless developer experience whil
 
 👉 **Live Storybook Preview**  
 Components can be explored, tested, and interacted with in real time at:  
-[storybook page](https://clon-adobe-design-system.vercel.app/?path=/story/atoms-alertdialog--open)
+https://clon-adobe-design-system.vercel.app/?path=/story/atoms-alertdialog--open
 
 ---
 
@@ -88,6 +87,25 @@ Quality and reliability are first-class concerns in this project.
 
 ---
 
+## 📊 Test Coverage
+
+The project includes **automated test coverage reporting** powered by **Vitest + v8**, providing clear insights into code quality and test completeness.
+
+### 📈 Overall Coverage Summary
+
+- **Statements:** 75.73%
+- **Branches:** 69.40%
+- **Functions:** 82.08%
+- **Lines:** 77.04%
+- **Test Suites:** 11
+- **Total Tests:** 67
+- **Status:** ✅ All tests passing
+- **Execution Time:** ~1.7s
+
+This level of coverage provides a **strong safety net for refactoring**, particularly in core UI primitives and shared hooks.
+
+---
+
 ## 📚 Documentation & Visual Testing
 
 The Storybook instance serves as the single source of truth for all UI components.
@@ -99,4 +117,4 @@ The Storybook instance serves as the single source of truth for all UI component
   Component props and variants are automatically documented using TypeScript definitions.
 
 - **Visual Regression Testing**  
-  Detects unintended UI changes and prevents CSS regressions as the system evolves.
+  Helps detect unintended UI changes and prevents CSS regressions as the system evolves.
